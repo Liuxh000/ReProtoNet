@@ -11,6 +11,8 @@ import torch
 import tqdm
 import numpy as np
 import torch.nn as nn
+
+
 def main(args):
     np.random.seed(args.manual_seed)
     torch.manual_seed(args.manual_seed)
@@ -26,15 +28,6 @@ def main(args):
 
 
     model = ReProtoNet(args)
-    if args.init_weights is not None:
-        model_dict = model.net.state_dict()
-        pretrained_dict = torch.load(args.init_weights)
-        pretrained_dict = {'encoder.' + k: v for k, v in pretrained_dict.items()}
-        pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        print(pretrained_dict.keys())
-        model_dict.update(pretrained_dict)
-        model.net.load_state_dict(model_dict)
-        print("model weight init success!")
 
     if torch.cuda.is_available():
         device = 'cuda:{}'.format(args.cuda)
@@ -95,7 +88,14 @@ def main(args):
             data, _ = val_batch
             data = data.to(device)
             model.fast_weights, model.prototypes, model.att1_param, model.att2_param = None, None, None, None
-            model.ft_pw(data, label)
+
+            if args.ft == 'pw':
+                model.ft_pw(data, label)
+            elif args.ft == 'p':
+                model.ft_p(data, label)
+            elif args.ft == 'w':
+                model.ft_w(data, label)
+
             with torch.no_grad():
                 loss, acc = model(data, label)
             tqdm_val.set_description('Loss={:.4f} Acc={:.4f}'.format(loss.item(), acc.item()))
@@ -117,6 +117,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_dir', type=str, default=r'C:\dataset\wikiart')
     parser.add_argument('--init_weights', type=str, default=r'./save/resnet34_a1_0-46f8f793.pth')
+    parser.add_argument('--backboe', type=str, default='resnet34_mtl')
     parser.add_argument('--manual_seed', type=int, default=7)
     parser.add_argument('--image_size', type=int, default=224)
     parser.add_argument('--epochs', type=int, default=100)
@@ -131,7 +132,8 @@ if __name__ == '__main__':
     parser.add_argument('--step_size', type=int, default=10)
     parser.add_argument('--gamma', type=float, default=0.5)
     parser.add_argument('--public_header', type=int, default=1)
-    parser.add_argument('--class_header', type=int, default=7)
+    parser.add_argument('--class_header', type=int, default=8)
+    parser.add_argument('--ft', type=str, default='pw')
 
     args = parser.parse_args()
     main(args)
