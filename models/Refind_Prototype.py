@@ -13,11 +13,20 @@ import torchvision
 class Net(nn.Module):
     def __init__(self, args):
         super().__init__()
-        self.encoder = ResNetMtl(layers=[3, 4, 6, 3], input_size=64, mtl=True)
-
-        #resnet34 = torchvision.models.resnet34()
-        #resnet34.load_state_dict(torch.load(args.init_weights))
-        #self.encoder = nn.Sequential(*list(resnet34.children())[:-2])
+        if args.backboe == 'resnet34_mtl':
+            self.encoder = ResNetMtl(layers=[3, 4, 6, 3], input_size=64, mtl=True)
+            model_dict = self.encoder.state_dict()
+            pretrained_dict = torch.load(args.init_weights)
+            pretrained_dict = {k: v for k, v in pretrained_dict.items()}
+            pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+            print(pretrained_dict.keys())
+            model_dict.update(pretrained_dict)
+            self.encoder.load_state_dict(model_dict)
+            print("model weight init success!")
+        elif args.backboe == 'resnet34':
+            resnet34 = torchvision.models.resnet34()
+            resnet34.load_state_dict(torch.load(args.init_weights))
+            self.encoder = nn.Sequential(*list(resnet34.children())[:-2])
 
     def forward(self, x, fast_weights=None):
         if fast_weights is None:
