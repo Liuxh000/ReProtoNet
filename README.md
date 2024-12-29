@@ -1,4 +1,4 @@
-# Refined Prototype Network for Few-Shot Art Style Classification
+# Refined Prototype Network for Enhanced Few-Shot Art Style Classification
 
 This repository implements a refined prototype network designed for few-shot learning, focusing on art style classification. The project leverages different backbone networks, fine-tuning methods, and transfer learning strategies to improve model performance.
 
