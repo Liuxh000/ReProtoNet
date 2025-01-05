@@ -31,6 +31,7 @@ dataset/
 ### Dataset Download and Divide
 `WikiArt`：The dataset can download at https://archive.org/details/wikiart-dataset.we designate the 18 classes with the most samples as the training set and the remaining 9 classes as the test set.\
 `MultitaskPainting100k`：The dataset can download at http://www.ivl.disco.unimib.it/activities/paintings. we exclude categories with fewer than 20 samples and use 70 of the remaining 110 categories as the training set, reserving 40 categories for the test set.\
+`Painting-91`：The dataset can download at [https://archive.org/details/wikiart-dataset](http://www.cat.uab.cat/~joost/painting91.html). we select the 8 classes with the largest number of samples for training and use the remaining 5 classes for testing.\
 
 Ensure that the dataset is preprocessed and ready to use before running the training script.
 
