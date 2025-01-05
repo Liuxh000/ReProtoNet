@@ -1,4 +1,11 @@
 # Refined Prototype Network for Enhanced Few-Shot Art Style Classification
+@article{
+  title={Refined Prototype Network for Enhanced Few-Shot Art Style Classification},
+  author={Liu, Xinhang and Liu, Li adn Lu, Yue and Suen, Ching Y.},
+  journal={The Visual Computer},
+  publisher={Springer}
+}
+
 
 This repository implements a refined prototype network designed for few-shot learning, focusing on art style classification. The project leverages different backbone networks, fine-tuning methods, and transfer learning strategies to improve model performance.
 
