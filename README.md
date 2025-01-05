@@ -29,8 +29,8 @@ dataset/
 - **`val/`**: Contains the validation data, structured similarly to the training data.
 
 ### Dataset Download and Divide
-`WikiArt`：The dataset can download at https://archive.org/details/wikiart-dataset.we designate the 18 classes with the most samples as the training set and the remaining 9 classes as the test set.\
-`MultitaskPainting100k`：The dataset can download at http://www.ivl.disco.unimib.it/activities/paintings .we designate the 18 classes with the most samples as the training set and the remaining 9 classes as the test set.\
+`WikiArt`：The dataset can download at (https://archive.org/details/wikiart-dataset).we designate the 18 classes with the most samples as the training set and the remaining 9 classes as the test set.\
+`MultitaskPainting100k`：The dataset can download at (http://www.ivl.disco.unimib.it/activities/paintings).we designate the 18 classes with the most samples as the training set and the remaining 9 classes as the test set.\
 
 Ensure that the dataset is preprocessed and ready to use before running the training script.
 
