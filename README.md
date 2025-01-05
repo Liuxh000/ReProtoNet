@@ -28,7 +28,11 @@ dataset/
 - **`train/`**: Contains the training data, with each class in its corresponding folder.  
 - **`val/`**: Contains the validation data, structured similarly to the training data.
 
+### Dataset Download and Divide
+
 Ensure that the dataset is preprocessed and ready to use before running the training script.
+
+`WikiArt`：The dataset can download at https://archive.org/details/wikiart-dataset
 
 ---
 
