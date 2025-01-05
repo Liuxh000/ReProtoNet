@@ -12,9 +12,9 @@ This repository implements a refined prototype network designed for few-shot lea
 ---
 
 ## Requirements
-Python = 3.7/
-PyTorch = 1.8.0/
-torchvision = 0.9.0/
+Python = 3.7\
+PyTorch = 1.8.0\
+torchvision = 0.9.0\
 CUDA = 11.1
 
 ## Dataset
