@@ -12,10 +12,10 @@ This repository implements a refined prototype network designed for few-shot lea
 ---
 
 ## Requirements
-Python 3.6
-PyTorch install = 1.4.0
-torchvision
-CUDA 10.1
+Python = 3.7/
+PyTorch = 1.8.0/
+torchvision = 0.9.0/
+CUDA = 11.1
 
 ## Dataset
 The dataset should be organized in the following directory structure:
