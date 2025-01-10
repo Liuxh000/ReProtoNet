@@ -1,7 +1,7 @@
 # Refined Prototype Network for Enhanced Few-Shot Art Style Classification
 @article{\
   title={Refined Prototype Network for Enhanced Few-Shot Art Style Classification},\
-  author={Liu, Xinhang and Liu, Li adn Lu, Yue and Suen, Ching Y.},\
+  author={Liu, Xinhang and Liu, Li and Lu, Yue and Suen, Ching Y.},\
   journal={The Visual Computer},\
   publisher={Springer}\
 }
