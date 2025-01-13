@@ -53,6 +53,12 @@ To start training, run:
 python train.py
 ```
 
+To start testing, run:
+
+```bash
+python test.py
+```
+
 ---
 
 ## Configuration Options
