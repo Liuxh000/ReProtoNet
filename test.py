@@ -62,7 +62,7 @@ def main(args):
 
     val_confidence_interval = st.t.interval(0.95, len(val_acc) - 1, loc=val_avg_acc, scale=st.sem(val_acc))
 
-    print('Val, Epoch {}, Loss={:.4f} Acc={:.4f}  +- {:.4f} \n'.format(i, val_avg_loss, val_avg_acc,
+    print('Val, Loss={:.4f} Acc={:.4f}  +- {:.4f} \n'.format(val_avg_loss, val_avg_acc,
                                                                        val_confidence_interval[1] - val_avg_acc))
 
 
