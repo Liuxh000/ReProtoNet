@@ -1,8 +1,8 @@
 # Refined Prototype Network for Enhanced Few-Shot Art Style Classification
 @article{\
   title={Refined Prototype Network for Enhanced Few-Shot Art Style Classification},\
-  author={Liu, Xinhang and Liu, Li and Lu, Yue and Suen, Ching Y.},\
-  journal={The Visual Computer},\
+  author={Li Liu , Huiqin Yu , Lei Wang , Yuexuan Tang , Xinhang Liu a,∗ , Ching Y. Suen},\
+  journal={Expert system with applications},\
   publisher={Springer}\
 }
 
@@ -82,6 +82,7 @@ The ft option determines the fine-tuning strategy:
 
 ---
 You can set these options directly in the `train.py` file to configure your experiment.
+
 
 
 
