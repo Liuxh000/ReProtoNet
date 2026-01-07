@@ -1,4 +1,4 @@
-# Refined Prototype Network for Enhanced Few-Shot Art Style Classification
+# Spatial-Aware Prototype Refinement for Robust Few-Shot Art Style Recognition
 @article{\
   title={Refined Prototype Network for Enhanced Few-Shot Art Style Classification},\
   author={Li Liu , Huiqin Yu , Lei Wang , Yuexuan Tang , Xinhang Liu , Ching Y. Suen},\
@@ -82,6 +82,7 @@ The ft option determines the fine-tuning strategy:
 
 ---
 You can set these options directly in the `train.py` file to configure your experiment.
+
 
 
 
