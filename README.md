@@ -40,6 +40,9 @@ dataset/
 `MultitaskPainting100k`：The dataset can download at [http://www.ivl.disco.unimib.it/activities/paintings](http://www.ivl.disco.unimib.it/activities/paintings/). we exclude categories with fewer than 20 samples and use 70 of the remaining 110 categories as the training set, reserving 40 categories for the test set.
 
 `Painting-91`：The dataset can download at [https://archive.org/details/wikiart-dataset](http://www.cat.uab.cat/~joost/painting91.html). we select the 8 classes with the largest number of samples for training and use the remaining 5 classes for testing.
+`Architectural Styles`：The dataset can download at [https://www.kaggle.com/datasets/dumitrux/architectural-styles-dataset],al., 2014) contains 10,113 images of 25 architectural styles. Since architectural images exhibit visual character- istics (geometry, symmetry, material textures) fundamentally different from paintings, we use this dataset exclusively as a cross-domain test set. It serves to evaluate how well prototype refinement learned from art images transfers to a distinct structural domain.
+`International Architectural Styles Combined`：The dataset can download at [https://www.kaggle.com/datasets/jungseolin/international-architectural-styles-combined], includes 14,833 images covering 45 building styles. Like the previous dataset, it is used entirely as a \emph{cross-domain test set}. 
+Its broader coverage of global architectural traditions further challenges the model’s ability to generalize refined prototypes beyond the art domain.
 
 Ensure that the dataset is preprocessed and ready to use before running the training script.
 
@@ -79,6 +82,7 @@ The ft option determines the fine-tuning strategy:
 
 ---
 You can set these options directly in the `train.py` file to configure your experiment.
+
 
 
 
